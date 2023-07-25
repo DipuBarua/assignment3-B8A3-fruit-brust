@@ -41,15 +41,33 @@
 </head>
 
 <body class="font-lato">
-    <header>
+    <header class="md:container md:mx-auto">
         <!-- nav bar section  -->
         <nav>
+            <div class="navbar bg-[#F85559] grid grid-cols-3 rounded-full px-10 py-7">
 
+                <div class="flex gap-7 text-lg font-medium text-[#FFF] text-center">
+                    <a href="">Home</a>
+                    <a href="">About Us</a>
+                    <a href="">Shop</a>
+                    <a href="">All Fruits</a>
+                </div>
+
+                <div class="flex gap-7">
+                    <img src="images/logo.png" alt="">
+                    <h2 class="text-4xl font-bold text-[#FFF]">Fruit Burst</h2>
+                </div>
+                <!-- search bar  -->
+                <div class="form-control flex flex-row">
+                    <input type="text" placeholder="Search here" class="input rounded-full bg-white w-24 md:w-auto" />
+                    <i class="fa-solid fa-magnifying-glass relative -left-8"></i>
+                </div>
+            </div>
         </nav>
         <!-- banner section  -->
     </header>
 
-    <main>
+    <main class="md:container md:mx-auto">
 
     </main>
 </body>
