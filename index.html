@@ -24,7 +24,7 @@
             theme: {
                 extend: {
                     colors: {
-                        clifford: '#da373d',
+                        'bg-color': '#F85559',
                     }
                 }
             }
@@ -44,25 +44,47 @@
     <header class="md:container md:mx-auto">
         <!-- nav bar section  -->
         <nav>
-            <div class="navbar bg-[#F85559] grid grid-cols-3 rounded-full px-10 py-7">
+            <div class="navbar lg:bg-[#F85559] lg:rounded-full flex flex-col-reverse md:flex-row">
+                <div class="navbar-start flex-1">
+                    <div class="dropdown">
+                        <label tabindex="0" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                  <!-- mobile screen, where lg: hidden  -->
+                </label>
+                        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg w-52 text-lg font-medium text-black">
+                            <li><a>Home</a></li>
+                            <li><a>About Us</a></li>
+                            <li><a>Shop</a></li>
+                            <li><a>All Fruits</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- laptop screen, where nav 3line button hidden  -->
+                <div class="navbar-start hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 text-lg font-medium text-white">
+                        <li><a>Home</a></li>
+                        <li><a>About Us</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruits</a></li>
+                    </ul>
 
-                <div class="flex gap-7 text-lg font-medium text-[#FFF] text-center">
-                    <a href="">Home</a>
-                    <a href="">About Us</a>
-                    <a href="">Shop</a>
-                    <a href="">All Fruits</a>
                 </div>
 
-                <div class="flex gap-7">
-                    <img src="images/logo.png" alt="">
-                    <h2 class="text-4xl font-bold text-[#FFF]">Fruit Burst</h2>
+                <div class="navbar-center gap-1">
+                    <img src="images/logo.png" alt="logo">
+                    <h2 class="text-4xl font-bold lg:text-[#FFF]">Fruit Burst</h2>
                 </div>
-                <!-- search bar  -->
-                <div class="form-control flex flex-row">
-                    <input type="text" placeholder="Search here" class="input rounded-full bg-white w-24 md:w-auto" />
-                    <i class="fa-solid fa-magnifying-glass relative -left-8"></i>
+
+                <!-- search box  -->
+                <div class="navbar-end hidden lg:flex">
+                    <div class="flex flex-row justify-center w-3/4 items-center">
+                        <input type="text" placeholder="Search here" class="input rounded-full bg-white w-24 md:w-full " />
+                        <i class="fa-solid fa-magnifying-glass relative -left-8"></i>
+                    </div>
                 </div>
+
             </div>
+
         </nav>
 
         <!--  banner section  -->
@@ -507,7 +529,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-3">
 
                 <!-- skills container 1  -->
-                <div class="space-y-12 inline-block">
+                <div class="space-y-12">
                     <!-- skill 1  -->
                     <div class="flex gap-6">
                         <div class="flex items-center">
